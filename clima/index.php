@@ -34,13 +34,13 @@
                         <h2><?=$clima->__get('temp')?>º</h2>
                         <hr>
                         <div class="mt-4">
-                            <p><b>Sensação termica:</b><?= round($clima->__get("feels_like"))?></p>
-                            <p><b>Mimina no momento:</b><?= round($clima->__get("temp_min"))?></p>
-                            <p><b>Máxima no momento:</b><?= round($clima->__get("temp_max"))?></p>
-                            <p><b>Umidade relativa do ar:</b><?= round($clima->__get("humidity"))?></p>
-                            <p><b>Pressão atmosférica:</b><?= round($clima->__get("pressure"))?></p>
-                            <p><b>Velocidade do vento:</b><?= round($clima->__get("wind_speed"))?></p>
-                            <p><b>Direção do vento:</b><?= round($clima->__get("wind_deg"))?></p>
+                            <p><b>Sensação térmica: </b><?= round($clima->__get('feels_like'), 0, PHP_ROUND_HALF_UP)?>°</p>
+                            <p><b>Mínima do momento:</b><?= round($clima->__get('temp_min'), 0, PHP_ROUND_HALF_UP)?>°</p>
+                            <p><b>Máxima do momento: </b><?= round($clima->__get('temp_max'), 0, PHP_ROUND_HALF_UP)?>°</p>
+                            <p><b>Umidade relativa do ar: </b><?= $clima->__get('humidity') ?>%</p>
+                            <p><b>Pressão atm: </b><?= $clima->__get('pressure') ?>hPa</p>
+                            <p><b>Velocidade do vento: </b><?= $clima->__get('wind_speed') ?>Km/h</p>
+                            <p><b>Direção do vento: </b><?= $clima->__get('wind_deg') ?>°</p>
                         </div>
                     </div>
                     <? } else { ?>
